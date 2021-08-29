@@ -55,12 +55,13 @@ char index_html[] PROGMEM = R"=====(
     }
 
     ul#modes li a {
-      min-width:220px;
+      min-width:200px;
     }
 
     ul.control li a {
-      min-width:60px;
-      min-height:24px;
+      width:60px;
+      height:15px;
+      line-height:15px;
     }
 
     ul.control {
@@ -77,10 +78,10 @@ char index_html[] PROGMEM = R"=====(
   </style>
 </head>
 <body>
-  <h1>Dragonfly Led Control</h1>
-
     <div class='flex-col'>
-      <div><canvas id='color-canvas' width='360' height='360'></canvas><br/></div>
+
+      <div><canvas id='color-canvas' width='360' height='360'></canvas></div>
+
       <div><input type='text' id='color-value' oninput='onColor(event, this.value)'/></div>
 
       <div>
@@ -101,11 +102,10 @@ char index_html[] PROGMEM = R"=====(
           <li><a href='#' onclick="onSpeaker(event, '1')">ON</a></li>
           <li><a href='#' onclick="onSpeaker(event, '0')">OFF</a></li>
         </ul>
-      </div>
 
-      <div>
-        <h3>Mode:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h3>
-        <ul id='modes' class='flex-col'>
+        <p>Mode:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+
+        <ul id='modes' class='flex-col'></ul>
       </div>
       
     </div>
