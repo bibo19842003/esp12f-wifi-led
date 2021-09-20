@@ -31,7 +31,7 @@ int noteDurations[] = {4, 8, 8, 4, 4, 4, 4, 4};
 int speakerpin = D1;  // 用于测试
 
 // wifi button
-int wifibutton = 0;  //wifibutton
+int wifibutton = D6;  //wifibutton
 int temp = 0;    // 用于读取按键状态的临时变量
 
 
